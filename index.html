@@ -1,325 +1,103 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Currículum de Pedro Axel Méndez López">
-    <meta name="author" content="Pedro Axel Méndez López">
-    <title>CV - Pedro Axel Méndez López</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- Bootstrap Toggle CSS -->
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./imagenpagina.ico" type="icon">
-
-    <!-- Custom Styles -->
+    <title>Curso de Inferencia Estadística</title>
     <style>
         body {
-            background-color: #012314 ; /* Verde pistache */
-            font-family: 'Roboto', sans-serif;
-            color: #ffffff; /* Blanco */
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Fondo beige */
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-
-        .wrapper {
-            display: flex;
-            background-color: #012314 ; /* Verde pistache */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar-wrapper {
-            background-color: #012314 ; /* Verde pistache */
-            color: #ffffff; /* Blanco */
+        header {
+            background-color: #4CAF50; /* Verde para encabezado */
+            color: white;
             padding: 20px;
-            min-width: 200px;
-        }
-
-        .main-wrapper {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .profile-container {
             text-align: center;
         }
-
-        .profile {
-            border-radius: 0%; /* Cuadrado */
-            width: 150px; /* Ajustar el tamaño del logo */
-            height: 150px; /* Ajustar el tamaño del logo */
-            object-fit: cover;
+        header img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+        header h1 {
+            display: inline;
+            margin-left: 10px;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #4CAF50; /* Verde para subtítulos */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
             margin-bottom: 10px;
         }
-
-        .name {
-            color:  #35e796; /* Dorado */
-            font-size: 24px;
-            margin: 0;
-        }
-
-        .tagline {
-            color: #808080; /* Gris */
-            font-size: 18px;
-            margin: 5px 0;
-        }
-
-        .contact-container,
-        .education-container,
-        .languages-container,
-        .interests-container,
-        .footer {
+        .bibliografia, .evaluacion {
             margin-top: 20px;
         }
-
-        .contact-list li {
-            margin-bottom: 10px;
-        }
-
-        .container-block-title {
-            color:   #35e796; /* Dorado */
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .section-title {
-            color:   #35e796; /* Dorado */
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .btn-primary {
-            background-color: #8b0000;
-            border-color: #8b0000;
-        }
-
-        .btn-primary:hover {
-            background-color: #580000;
-            border-color: #580000;
-        }
-
-        .btn-primary:focus,
-        .btn-primary.focus {
-            box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.5);
-        }
-
-        .footer {
+        footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #012314 ; /* Verde pistache */
-            color: #ffffff; /* Blanco */
-        }
-
-        .section.summary-section {
-            border-bottom: 2px solid  #35e796; /* Dorado */
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-
-        .section.summary-section p {
-            font-size: 18px;
-        }
-
-        .skills-section,
-        .experiences-section {
-            border-bottom: 2px solid  #35e796; /* Dorado */
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-
-        .skillset,
-        .experiences-section .item {
-            border-left: 2px solid  #35e796; /* Dorado */
-            padding-left: 20px;
-        }
-
-        .footer p {
-            font-size: 16px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
-
 <body>
-    <div class="wrapper">
-        <!-- Sidebar -->
-        <div class="sidebar-wrapper">
-            <!-- Profile -->
-            <div class="profile-container">
-                <!-- Profile Image -->
-                <img class="profile" src="./logo.ico" alt="icon">
-                <!-- Name and Tagline -->
-                <h1 class="name">Pedro Axel Méndez López</h1>
-                <h3 class="tagline">Actuario</h3>
-            </div><!--// Profile -->
 
-            <!-- Contact Information -->
-            <div class="contact-container container-block">
-                <h2 class="container-block-title">Contacto</h2>
-                <ul class="list-unstyled contact-list">
-                    <li class="email"><i class="fa fa-envelope"></i><a
-                            href="mailto:axelmendezlopez@ciencias.unam.mx">axelmendezlopez@ciencias.unam.mx</a></li>
-                    <li class="phone"><i class="fa fa-phone"></i> 5610397403</li>
-                </ul>
-            </div><!--// Contact Information -->
+<header>
+    <img src="tu_imagen_icono.png" alt="Logo">
+    <h1>Curso de Inferencia Estadística</h1>
+</header>
 
-            <!-- Education Section -->
-            <div class="education-container container-block">
-                <h2 class="container-block-title">Educación</h2>
-                <div class="item">
-                    <h4 class="degree">Actuario</h4>
-                    <h5 class="meta">UNAM | 2018 - 2023</h5>
-                </div>
-            
-            </div><!--// Education Section -->
+<main>
+    <h2>Temario</h2>
+    <p>En este curso nos enfocaremos en los siguientes temas:</p>
+    <ul>
+        <li>Introducción a la estadística</li>
+        <li>Estadística descriptiva</li>
+        <li>Estimación puntual</li>
+        <li>Estimación por intervalos</li>
+        <li>Pruebas de hipótesis</li>
+    </ul>
 
-            <!-- Languages Section -->
-            <div class="languages-container container-block">
-                <h2 class="container-block-title">Idiomas</h2>
-                <ul class="list-unstyled interests-list">
-                    <li>Español (Nativo)</li>
-                    <li>Inglés (Medio)</li>
-                </ul>
-            </div><!--// Languages Section -->
+    <div class="evaluacion">
+        <h2>Evaluación</h2>
+        <p>La evaluación del curso será de la siguiente manera:</p>
+        <ul>
+            <li>30% Tareas</li>
+            <li>30% Proyecto</li>
+            <li>40% Examen</li>
+        </ul>
+    </div>
 
-            <!-- Interests Section -->
-            <div class="interests-container container-block">
-                <h2 class="container-block-title">Intereses</h2>
-                <ul class="list-unstyled interests-list">
-                    <li>Software y Hardware de Código Abierto</li>
-                    <li>Machine Learning</li>
-                    <li>Literatura</li>
-                    <li>Data science</li>
-                </ul>
-            </div><!--// Interests Section -->
+    <div class="bibliografia">
+        <h2>Bibliografía</h2>
+        <ul>
+            <li>Alamilla, J., Naranjo, L., Fuentes, R., Chávez, M. (2019). Inferencia estadística para estudiantes de Ciencias.</li>
+            <li>Casella, G. & Berger, R. L. (2002). Statistical Inference. 2da Edición. Duxbury Press.</li>
+            <li>Hogg, R. V. & Craig, A.T. (1995). Introduction to Mathematical Statistics. 5ta Edición. New Jersey. Prentice-Hall.</li>
+            <li>Mood, A. M., Graybill, F. A. & Boes, D.C. (1974). Introduction to the Theory of Statistics. 3ra Edición. New York. McGraw-Hill.</li>
+            <li>Tukey, J. W. (1977). Exploratory Data Analysis. Addison Wesley.</li>
+        </ul>
+    </div>
+</main>
 
-        </div><!--// Sidebar -->
-
-        <!-- Main Content -->
-        <div class="main-wrapper">
-            <!-- Summary Section -->
-            <section class="section summary-section">
-                <h2 class="section-title">Perfil Profesional</h2>
-                <div class="summary">
-                    <p>
-                        Si pudiera hacer algo por toda mi vida, sería aprender. Mi carrera y experiencia profesional me ha permitido aprender tecnologías, enfoques, metodologías y también cómo trabajar con la gente. Disfruto creando
-                        nuevas experiencias para construir la mejor versión de mí mismo.
-                    </p>
-                </div><!--// Summary -->
-            </section><!--// Summary Section -->
-
-            <!-- Skills Section -->
-            <section class="skills-section section">
-                <h2 class="section-title"><i class="fa fa-code-fork"></i> Habilidades y Destrezas</h2>
-                <div class="skillset">
-                    <!-- Skills Items -->
-                    <!-- Add or modify skills as needed -->
-                    <div class="item">
-                        <h3 class="level-title">Python</h3>
-                    </div>
-                    <div class="item">
-                        <h3 class="level-title">MySQL</h3>
-                    </div>                    
-                    <div class="item">
-                        <h3 class="level-title">R Studio</h3>
-                    </div>
-                    <div class="item">
-                        <h3 class="level-title">Power BI</h3>
-                    </div>                    
-                    <div class="item">
-                        <h3 class="level-title">Excel-Intermedio</h3>
-                    </div>
-                </div>
-            </section><!--// Skills Section -->
-
-            <!-- Other Technologies Section -->
-            <section class="skills-section section">
-                <h2 class="section-title"><i class="fa fa-rocket"></i> Otras Tecnologías y Conocimientos</h2>
-                <div class="skillset">
-                    <!-- Add or modify other technologies as needed -->
-                    <div class="item">
-                        <h3 class="level-title">Git</h3>
-                    </div>
-                </div>
-            </section><!--// Other Technologies Section -->
-
-            <!-- Experiences Section -->
-            <section class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-briefcase"></i> Experiencias </h2>
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Asistente de Profesor - Facultad de ciencias</h3>
-                            <div class="time">Agosto 2023 - Presente</div>
-                        </div>
-                    </div>
-                    <div class="details"></div>
-                </div>
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Becario en mercadotecnia NADRO(data analyst) </h3>
-                            <div class="time">Julio 2024 - Presente</div>
-                        </div>
-                    </div>
-                    <div class="details"></div>
-                </div>                
-            </section><!--// Experiences Section -->
-
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="text-center">
-                    <p>&copy; Pedro Axel Méndez López</p>
-                    <p>Comunicarse al: 5610397403</p>
-                    <!-- Botones de GitHub y LinkedIn -->
-                    <a class="btn btn-primary" href="https://github.com/AxelM007" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a class="btn btn-primary" href="https://www.linkedin.com/in/pedro-axel-méndez-lópez-2b695a27a/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <!-- Agregamos el botón para abrir el PDF desde Google Drive -->
-                    <a class="btn btn-primary" href="https://drive.google.com/file/d/1kuq4yAx4KcOce83z5C1vN_PCLDuhbx32/view?usp=sharing"
-                        target="_blank">Ver CV en PDF</a>
-                </div>
-            </footer><!--// Footer -->
-
-        </div><!--// Main Content -->
-
-    </div><!--// Wrapper -->
-
-    <!-- Javascript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    <!-- Custom JS -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+<footer>
+    <p>Curso de Inferencia Estadística - 2025</p>
+</footer>
 
 </body>
-
 </html>
