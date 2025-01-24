@@ -1,103 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso de Inferencia Estadística">
+    <meta name="author" content="Pedro Axel Méndez López">
     <title>Curso de Inferencia Estadística</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Bootstrap Toggle CSS -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./imagenpagina.ico" type="icon">
+
+    <!-- Custom Styles -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5dc; /* Fondo beige */
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50; /* Verde para encabezado */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header img {
-            width: 50px;
-            height: 50px;
-            vertical-align: middle;
-        }
-        header h1 {
-            display: inline;
-            margin-left: 10px;
-            font-size: 2em;
-        }
-        main {
-            padding: 20px;
-        }
-        h2 {
-            color: #4CAF50; /* Verde para subtítulos */
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .bibliografia, .evaluacion {
-            margin-top: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+      body {
+        background-color: #f4f4f4; /* Fondo blanco/beige */
+        font-family: 'Roboto', sans-serif;
+        color: #333; /* Color oscuro para el texto */
+      }
+
+      .wrapper {
+        display: flex;
+        background-color: #f4f4f4;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar-wrapper {
+        background-color: #ffffff; /* Fondo blanco para la barra lateral */
+        color: #333; /* Texto oscuro */
+        padding: 20px;
+        min-width: 250px;
+      }
+
+      .main-wrapper {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .profile-container {
+        text-align: center;
+      }
+
+      .profile {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        color: #008080; /* Color verde */
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .tagline {
+        color: #808080;
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      .container-block-title {
+        color: #008080;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .section-title {
+        color: #008080;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      .footer p {
+        font-size: 16px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar-wrapper">
+        <!-- Profile -->
+        <div class="profile-container">
+          <!-- Profile Image -->
+          <img class="profile" src="./logo.ico" alt="logo">
+          <!-- Name and Tagline -->
+          <h1 class="name">Curso de Inferencia Estadística</h1>
+          <h3 class="tagline">Facultad de Ciencias</h3>
+        </div><!--// Profile -->
 
-<header>
-    <img src="tu_imagen_icono.png" alt="Logo">
-    <h1>Curso de Inferencia Estadística</h1>
-</header>
+        <!-- Contact Information -->
+        <div class="contact-container container-block">
+          <h2 class="container-block-title">Contacto</h2>
+          <ul class="list-unstyled contact-list">
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto:axelmendezlopez@ciencias.unam.mx">axelmendezlopez@ciencias.unam.mx</a></li>
+            <li class="phone"><i class="fa fa-phone"></i> 5610397403</li>
+          </ul>
+        </div><!--// Contact Information -->
+      </div><!--// Sidebar -->
 
-<main>
-    <h2>Temario</h2>
-    <p>En este curso nos enfocaremos en los siguientes temas:</p>
-    <ul>
-        <li>Introducción a la estadística</li>
-        <li>Estadística descriptiva</li>
-        <li>Estimación puntual</li>
-        <li>Estimación por intervalos</li>
-        <li>Pruebas de hipótesis</li>
-    </ul>
+      <!-- Main Content -->
+      <div class="main-wrapper">
+        <!-- Temario Section -->
+        <section class="section summary-section">
+          <h2 class="section-title">Temario</h2>
+          <div class="summary">
+            <p>En este curso nos enfocaremos en los siguientes temas:</p>
+            <ul>
+              <li>Introducción a la estadística</li>
+              <li>Estadística descriptiva</li>
+              <li>Estimación puntual</li>
+              <li>Estimación por intervalos</li>
+              <li>Pruebas de hipótesis</li>
+            </ul>
+          </div>
+        </section><!--// Temario Section -->
 
-    <div class="evaluacion">
-        <h2>Evaluación</h2>
-        <p>La evaluación del curso será de la siguiente manera:</p>
-        <ul>
-            <li>30% Tareas</li>
-            <li>30% Proyecto</li>
-            <li>40% Examen</li>
-        </ul>
-    </div>
-
-    <div class="bibliografia">
-        <h2>Bibliografía</h2>
-        <ul>
+        <!-- Bibliografía y Evaluación -->
+        <section class="section">
+          <h2 class="section-title">Bibliografía</h2>
+          <ul>
             <li>Alamilla, J., Naranjo, L., Fuentes, R., Chávez, M. (2019). Inferencia estadística para estudiantes de Ciencias.</li>
             <li>Casella, G. & Berger, R. L. (2002). Statistical Inference. 2da Edición. Duxbury Press.</li>
             <li>Hogg, R. V. & Craig, A.T. (1995). Introduction to Mathematical Statistics. 5ta Edición. New Jersey. Prentice-Hall.</li>
             <li>Mood, A. M., Graybill, F. A. & Boes, D.C. (1974). Introduction to the Theory of Statistics. 3ra Edición. New York. McGraw-Hill.</li>
             <li>Tukey, J. W. (1977). Exploratory Data Analysis. Addison Wesley.</li>
-        </ul>
-    </div>
-</main>
+          </ul>
+        </section>
 
-<footer>
-    <p>Curso de Inferencia Estadística - 2025</p>
-</footer>
+        <!-- Evaluación -->
+        <section class="section">
+          <h2 class="section-title">Evaluación</h2>
+          <ul>
+            <li>Tareas: 30%</li>
+            <li>Proyecto: 30%</li>
+            <li>Examen: 40%</li>
+          </ul>
+        </section><!--// Bibliografía y Evaluación Section -->
 
-</body>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="text-center">
+            <p>&copy; Pedro Axel Méndez López</p>
+            <p>Comunicarse al: 5610397403</p>
+            <!-- Botones de GitHub y LinkedIn -->
+            <a class="btn btn-primary" href="https://github.com/AxelM007" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/pedro-axel-méndez-lópez-2b695a27a/" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </footer><!--// Footer -->
+      </div><!--// Main Content -->
+    </div><!--// Wrapper -->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
 </html>
